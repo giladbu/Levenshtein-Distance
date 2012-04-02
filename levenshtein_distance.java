@@ -194,7 +194,7 @@ public class levenshtein_distance {
 		return result;
 	}
 	private Set<Word> network(Word word) throws InterruptedException, ExecutionException {
-		//if(Runtime.getRuntime().availableProcessors() > 1) return parallelNetwork(word);
+		if(Runtime.getRuntime().availableProcessors() > 1) return parallelNetwork(word);
 
 		HashSet<Word> result = new HashSet<Word>();
 		LinkedList<Word> queue = new LinkedList<Word>();
